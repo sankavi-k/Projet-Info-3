@@ -15,7 +15,7 @@ typedef struct Vehicule{ // liste chaînée des véhicules
 };
 
 typedef struct avl{ // noeud de l'avl
-  int year;
+  int annee;
   int collision_id;
   Vehicule* vehicule;
   int equilibre;
