@@ -43,7 +43,7 @@ pAvl DoubleRotationDroite(pAvl a);
 pAvl equilibrerAvl(pAvl a);
 
 // permet de créer un accident et ajouter dans l'avl
-pAvl* créerAccident(int ac, Vehicule* v, int e);
+pAvl* créerAccident(int annee, int collision, Vehicule* v, int e);
 pAvl* ajouterAccident(int annee, int collision);
 
 // permet de rechercher avec le nombre composé de année+collision ( représentant un accident ) dans l'avl
