@@ -24,3 +24,5 @@ typedef struct avl{ // noeud de l'avl
 }avl;
 
 typedef struct avl* pavl;
+
+Victime creerVictime(int age, int genre, int type, int gravite);
