@@ -21,7 +21,13 @@ Victime* creerVictime(int a, int b, int c, int d){
   return nouveau;
 }
 
-Vehicule* creerVehicule(int identifiant, int cause, Victime* victime){}
+Vehicule* creerVehicule(int identifiant, int cause, Victime* victime){
+  Vehicule* vehicule=malloc(sizeof(Vehicule));
+  if(vehicule==NULL){
+    exit(1);
+  }
+  vehicule->
+}
 
 
 pAvl RotationGauche(pAvl a){}
