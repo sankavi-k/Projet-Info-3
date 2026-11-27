@@ -53,7 +53,7 @@ pAvl* creerAccident(int annee, int collision_id){
   	return nouveau;
 }
 
-// ETAPE 2 : AJOUTER LES VICTIMES, VEHICULES, ET ACCIDENTS POUR CREER L'ARBRE
+// ETAPE 2 : LES FONCTIONS POUR EQUILIBRER L'ARBRE ET CREER UN AVL
 
 pAvl RotationGauche(pAvl a){
   if(a==NULL){
@@ -115,6 +115,17 @@ pAvl equilibrerAvl(pAvl a){
 	return a;
 }
 
+// ETAPE 3 : AJOUTER LES DONNEES DU FICHIER DANS L'ARBRE
+
+
+
+
+
+// ETAPE 4 : RECHERCHER L'ACCIDENT AVEC IDENTIFIANT DONNE PAR L'UTILISATEUR 
+
+
+
+// ETAPE 5 : AFFICHER TOUTES LES DONNEES LIES A L'ACCIDENTS ( liste de véhicules (+infos) et de victimes (+infos) à chaque véhicule
 
 
 
