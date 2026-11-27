@@ -95,13 +95,13 @@ pAvl DoubleRotationDroite(pAvl a){
   return rotationDroite(a);
 }
 
-pAvl equilibrerAvl(pAvl a){
+pAvl* equilibrerAvl(pAvl* a){
 	if(a->equilibre>=2){
 		if(a->fd->equilibre>=0){
-			return DoubleRotationGauche(pAvl a);
+			return DoubleRotationGauche(a);
 		}
 		else{
-			return DoubleRotationGauche(pAvl a);
+			return DoubleRotationGauche(a);
 		}
 	}
 	else if(a->equilibre<=-2){
