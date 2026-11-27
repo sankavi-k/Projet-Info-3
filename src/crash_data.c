@@ -1,3 +1,7 @@
+#include <"stdio.h">
+
+
+
 Victime* creerVictime(int a, int b, int c, int d){
   
   Victime* nouveau=malloc(sizeof(Victime));
