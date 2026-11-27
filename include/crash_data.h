@@ -46,6 +46,5 @@ pAvl equilibrerAvl(pAvl a);
 pAvl* créerAccident(int ac, Vehicule* v, int e);
 pAvl* ajouterAccident(int annee, int collision);
 
-
 // permet de rechercher avec le nombre composé de année+collision ( représentant un accident ) dans l'avl
 pAvl rechercheAccident( pAvl a, int ac);
