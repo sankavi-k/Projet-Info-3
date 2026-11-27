@@ -21,11 +21,11 @@ Victime* creerVictime(int a, int b, int c, int d){
   return nouveau;
 }
 
-Victime* ajouterVictime(Vehicule* vehicule, Victime v){}
+Victime* ajouterVictime({}
 
 Vehicule* creerVehicule(int identifiant, int cause, Victime* victime){}
 
-Vehicule* ajouterVehicule(pavl a, Vehicule vehicule){}
+Vehicule* ajouterVehicule(){}
 
 pAvl RotationGauche(pAvl a){}
 
@@ -37,8 +37,8 @@ pAvl DoubleRotationDroite(pAvl a){}
 
 pAvl equilibrerAvl(pAvl a){}
 
-pAvl* creerAccident(int ac, Vehicule* v, int e){}
+pAvl* creerAccident(int annee, int collision_id){}
 
-pAvl* ajouterAccident(int annee, int collision){}
+pAvl* ajouterAccident(){}
 
 pAvl rechercheAccident( pAvl a, int ac){}
