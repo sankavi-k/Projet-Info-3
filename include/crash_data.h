@@ -31,7 +31,7 @@ Victime* creerVictime(int age, int genre, int type, int gravite);
 Victime* ajouterVictime(Vehicule* vehicule, Victime* v);
 
 // permet de créer un véhicule et ajouter à un accident
-Vehicule* creerVehicule(int identifiant, int cause, Victime* victime);
+Vehicule* creerVehicule(int identifiant, int cause);
 Vehicule* ajouterVehicule(pavl a, Vehicule* vehicule);
 
 // permet de créer l'avl et d'équilibrer l'arbre lors de l'ajout des accidents
@@ -42,7 +42,7 @@ pAvl* DoubleRotationDroite(pAvl* a);
 pAvl* equilibrerAvl(pAvl* a);
 
 // permet de créer un accident et ajouter dans l'avl
-pAvl* creerAccident(int annee, int collision, Vehicule* v, int e);
+pAvl* creerAccident(int annee, int collision_id);
 pAvl* ajouterAccident(int annee, int collision);
 
 // permet de rechercher avec le nombre composé de année+collision ( représentant un accident ) dans l'avl
