@@ -21,12 +21,20 @@ Victime* creerVictime(int a, int b, int c, int d){
   return nouveau;
 }
 
-Vehicule* creerVehicule(int identifiant, int cause, Victime* victime){
+Vehicule* creerVehicule(int identifiant, int cause){
+  
   Vehicule* vehicule=malloc(sizeof(Vehicule));
+  
   if(vehicule==NULL){
     exit(1);
   }
-  vehicule->
+  
+  vehicule->vehicule_id=identifiant;
+  vehicule->cause=cause;
+  vehicule->victime=NULL;
+  vehicule->suivant=NULL;
+  
+  return vehicule;
 }
 
 
