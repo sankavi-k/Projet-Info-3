@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <"crash_data.h">
 
+// CREATION DE L'AVL
 
+// ETAPE 1 : CREER LES VICTIMES, VEHICULE ET ACCIDENTS ( NOEUD DE L'AVL ) pour ensuite pouvoir mettre les données du fichier
 
 Victime* creerVictime(int a, int b, int c, int d){
   
@@ -37,6 +39,21 @@ Vehicule* creerVehicule(int identifiant, int cause){
   return vehicule;
 }
 
+
+pAvl* creerAccident(int annee, int collision_id){
+	pAvl nouveau=malloc(sizeof(pAvl));
+	if(pAvl==NULL){
+		exit (1);
+	}
+	nouveau->annee_collision=( faire en sorte de faire annee + collision_id );
+	nouveau->vehicule=NULL;
+  	nouveau->equilibre=1;
+  	nouveau->fg=NULL;
+  	nouveau->fd=NULL;
+  	return nouveau;
+}
+
+// ETAPE 2 : AJOUTER LES VICTIMES, VEHICULES, ET ACCIDENTS POUR CREER L'ARBRE
 
 pAvl RotationGauche(pAvl a){
   if(a==NULL){
@@ -99,18 +116,6 @@ pAvl equilibrerAvl(pAvl a){
 }
 
 
-pAvl* creerAccident(int annee, int collision_id){
-	pAvl nouveau=malloc(sizeof(pAvl));
-	if(pAvl==NULL){
-		exit (1);
-	}
-	nouveau->annee_collision=( faire en sorte de faire annee + collision_id );
-	nouveau->vehicule=NULL;
-  	nouveau->equilibre=1;
-  	nouveau->fg=NULL;
-  	nouveau->fd=NULL;
-  	return nouveau;
-}
 
 
 
