@@ -123,13 +123,6 @@ pAvl equilibrerAvl(pAvl a){
 
 // ETAPE 4 : RECHERCHER L'ACCIDENT AVEC IDENTIFIANT DONNE PAR L'UTILISATEUR 
 
-
-
-// ETAPE 5 : AFFICHER TOUTES LES DONNEES LIES A L'ACCIDENTS ( liste de véhicules (+infos) et de victimes (+infos) à chaque véhicule
-
-
-
-
 pAvl rechercheAccident( pAvl a, int ac){
 	if(a==NULL){
 		return NULL;
@@ -144,3 +137,10 @@ pAvl rechercheAccident( pAvl a, int ac){
 		return recherche(a->fd, ac);
 	}
 }
+
+// ETAPE 5 : AFFICHER TOUTES LES DONNEES LIES A L'ACCIDENTS ( liste de véhicules (+infos) et de victimes (+infos) à chaque véhicule
+
+
+
+
+
