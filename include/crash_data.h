@@ -1,5 +1,5 @@
-
-typedef struct Victime{ // liste chaînée des victimes 
+// liste chaînée des victimes 
+typedef struct Victime{ 
   int age;
   int genre;
   int type;
@@ -7,14 +7,16 @@ typedef struct Victime{ // liste chaînée des victimes
   struct Victime* suivant;
 };
 
-typedef struct Vehicule{ // liste chaînée des véhicules
+// liste chaînée des véhicules
+typedef struct Vehicule{ 
   int vehicule_id;
   int cause;
   Victime* victime;
   struct Vehicule* suivant;
 };
 
-typedef struct Avl{ // représente les accidents du tableau
+// représente les accidents du tableau
+typedef struct Avl{ 
   int annee;
   int collision_id;
   Vehicule* vehicule;
