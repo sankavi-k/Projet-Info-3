@@ -35,7 +35,7 @@ Vehicule* ajouterVehicule(pavl a, Vehicule vehicule);
 
 // permet de créer un accident et ajouter dans l'avl
 pAvl* créerAccident(int ac, Vehicule* v, int e);
-pAvl* ajouterAccident(
+pAvl* ajouterAccident(int annee, int collision);
 
 // permet de créer l'avl et d'équilibrer l'arbre lors de l'ajout des accidents
 pAvl RotationGauche(pAvl a);
@@ -44,4 +44,5 @@ pAvl DoubleRotationGauche(pAvl a);
 pAvl DoubleRotationDroite(pAvl a);
 pAvl equilibrerAvl(pAvl a);
 
+// permet de rechercher avec le nombre composé de année+collision ( représentant un accident ) dans l'avl
 pAvl rechercheAccident( pAvl a, int ac);
