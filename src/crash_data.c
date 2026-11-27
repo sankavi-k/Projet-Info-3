@@ -38,15 +38,65 @@ Vehicule* creerVehicule(int identifiant, int cause){
 }
 
 
-pAvl RotationGauche(pAvl a){}
+pAvl RotationGauche(pAvl a){
+  if(a==NULL){
+    exit(1);
+  }
+  pAvl pivot = a->fd;
+  a->fd = pivot->fg;
+  pivot->fg = a;
+  int eq_a = a->equilibre;
+  int eq_p = pivot->equilibre;
+  a->equilibre = eq_a - max(eq_p, 0) - 1;
+  pivot->equilibre = min(eq_a - 2, eq_a + eq_p -2, eq_p -1);
+  a = pivot;
+  return a;
+}
 
-pAvl RotationDroite(pAvl a){}
+pAvl RotationDroite(pAvl a){
+  if(a==NULL){
+    exit(1);
+  }
+  pAvl pivot = a->fg;
+  a->fg = pivot->fd;
+  pivot->fd = a;
+  int eq_a = a->equilibre;
+  int eq_p = pivot->equilibre;
+  a->equilibre = eq_a - max(eq_p, 0) - 1;
+  pivot->equilibre = min(eq_a - 2, eq_a + eq_p -2, eq_p -1);
+  a = pivot;
+  return a;
+}
 
-pAvl DoubleRotationGauche(pAvl a){}
+pAvl DoubleRotationGauche(pAvl a){
+  a->fd = rotationDroite(a->fd);
+  return rotationGauche(a);
+}
 
-pAvl DoubleRotationDroite(pAvl a){}
+pAvl DoubleRotationDroite(pAvl a){
+  a->fg = rotationGauche(a->fg);
+  return rotationDroite(a);
+}
 
-pAvl equilibrerAvl(pAvl a){}
+pAvl equilibrerAvl(pAvl a){
+	if(a->equilibre>=2){
+		if(a->fd->equilibre>=0){
+			return DoubleRotationGauche(pAvl a);
+		}
+		else{
+			return DoubleRotationGauche(pAvl a);
+		}
+	}
+	else if(a->equilibre<=-2){
+		if(a->fg->equilibre<=0){
+			return RotationDroite(a);
+		}
+		else{
+			return DoubleRotationDroite(a);
+		}
+	}
+	return a;
+}
 
 
 pAvl* creerAccident(int annee, int collision_id){
