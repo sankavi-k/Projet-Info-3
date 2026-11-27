@@ -49,7 +49,20 @@ pAvl DoubleRotationDroite(pAvl a){}
 pAvl equilibrerAvl(pAvl a){}
 
 
-pAvl* creerAccident(int annee, int collision_id){}
+pAvl* creerAccident(int annee, int collision_id){
+	pAvl nouveau=malloc(sizeof(pAvl));
+	if(pAvl==NULL){
+		exit (1);
+	}
+	nouveau->annee_collision=( faire en sorte de faire annee + collision_id );
+	nouveau->vehicule=NULL;
+  nouveau->equilibre=1;
+  nouveau->fg=NULL;
+  nouveau->fd=NULL;
+  return nouveau;
+}
+
+}
 
 
 pAvl rechercheAccident( pAvl a, int ac){}
