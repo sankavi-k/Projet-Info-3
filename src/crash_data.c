@@ -1,8 +1,6 @@
-
-
-Victime creerVictime(int a, int b, int c, int d){
+Victime* creerVictime(int a, int b, int c, int d){
   
-  Victime nouveau=malloc(sizeof(Victime));
+  Victime* nouveau=malloc(sizeof(Victime));
   
   if ( nouveau == NULL ){
     exit(1);
