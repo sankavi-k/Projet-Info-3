@@ -56,10 +56,10 @@ pAvl* creerAccident(int annee, int collision_id){
 	}
 	nouveau->annee_collision=( faire en sorte de faire annee + collision_id );
 	nouveau->vehicule=NULL;
-  nouveau->equilibre=1;
-  nouveau->fg=NULL;
-  nouveau->fd=NULL;
-  return nouveau;
+  	nouveau->equilibre=1;
+  	nouveau->fg=NULL;
+  	nouveau->fd=NULL;
+  	return nouveau;
 }
 
 
