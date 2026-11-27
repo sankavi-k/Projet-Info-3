@@ -62,7 +62,6 @@ pAvl* creerAccident(int annee, int collision_id){
   return nouveau;
 }
 
-}
 
 
 pAvl rechercheAccident( pAvl a, int ac){}
