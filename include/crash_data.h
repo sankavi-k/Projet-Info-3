@@ -1,3 +1,4 @@
+
 typedef struct Victime{ // liste chaînée des victimes 
   int age;
   int genre;
@@ -18,8 +19,10 @@ typedef struct avl{ // noeud de l'avl
   int collision_id;
   Vehicule* vehicule;
   int equilibre;
-  struct avl* fg;
+  struct avl* fg
   struct avl* fd;
 }avl;
 
 typedef struct avl* pavl;
+
+Victime creerVictime(int age, int genre, int type, int gravite);
