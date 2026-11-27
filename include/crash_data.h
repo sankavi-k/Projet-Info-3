@@ -45,3 +45,6 @@ pAvl* ajouterAccident(int annee, int collision);
 
 // permet de rechercher avec le nombre composé de année+collision ( représentant un accident ) dans l'avl
 pAvl* rechercheAccident( pAvl a, int ac);
+
+// permet d'afficher les informations de l'accident trouvé par la fonction rechercherAccident
+void afficherDonnees( pAVl a );
