@@ -130,4 +130,17 @@ pAvl equilibrerAvl(pAvl a){
 
 
 
-pAvl rechercheAccident( pAvl a, int ac){}
+pAvl rechercheAccident( pAvl a, int ac){
+	if(a==NULL){
+		return NULL;
+	}
+	else if(ac==a->annee_collision){
+		return a;
+	}
+	else if (ac<a->annee_collision){
+		return recherche(a->fg, ac);
+	}
+	else{
+		return recherche(a->fd, ac);
+	}
+}
