@@ -28,18 +28,18 @@ typedef struct avl* pavl;
 
 // permet de créer victime et ajouter à un véhicule 
 Victime* creerVictime(int age, int genre, int type, int gravite);
-Victime* ajouterVictime(Vehicule* vehicule, Victime v);
+Victime* ajouterVictime(Vehicule* vehicule, Victime* v);
 
 // permet de créer un véhicule et ajouter à un accident
 Vehicule* creerVehicule(int identifiant, int cause, Victime* victime);
-Vehicule* ajouterVehicule(pavl a, Vehicule vehicule);
+Vehicule* ajouterVehicule(pavl a, Vehicule* vehicule);
 
 // permet de créer l'avl et d'équilibrer l'arbre lors de l'ajout des accidents
-pAvl RotationGauche(pAvl a);
-pAvl RotationDroite(pAvl a);
-pAvl DoubleRotationGauche(pAvl a);
-pAvl DoubleRotationDroite(pAvl a);
-pAvl equilibrerAvl(pAvl a);
+pAvl* RotationGauche(pAvl* a);
+pAvl* RotationDroite(pAvl* a);
+pAvl* DoubleRotationGauche(pAvl* a);
+pAvl* DoubleRotationDroite(pAvl* a);
+pAvl* equilibrerAvl(pAvl* a);
 
 // permet de créer un accident et ajouter dans l'avl
 pAvl* creerAccident(int annee, int collision, Vehicule* v, int e);
