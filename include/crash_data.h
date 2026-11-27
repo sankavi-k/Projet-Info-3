@@ -17,8 +17,7 @@ typedef struct Vehicule{
 
 // représente les accidents du tableau
 typedef struct Avl{ 
-  int annee;
-  int collision_id;
+  int annee_collision;
   Vehicule* vehicule;
   int equilibre;
   struct avl* fg
