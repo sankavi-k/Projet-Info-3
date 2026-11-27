@@ -5,7 +5,7 @@ typedef struct Victime{
   int type;
   int gravite;
   struct Victime* suivant;
-};
+}Victime;
 
 // liste chaînée des véhicules
 typedef struct Vehicule{ 
@@ -13,7 +13,7 @@ typedef struct Vehicule{
   int cause;
   Victime* victime;
   struct Vehicule* suivant;
-};
+}Vehicule;
 
 // représente les accidents du tableau
 typedef struct Avl{ 
@@ -22,9 +22,7 @@ typedef struct Avl{
   int equilibre;
   struct avl* fg
   struct avl* fd;
-}Avl;
-
-typedef struct avl* pavl;
+}Avl, * pavl;
 
 // permet de créer victime et ajouter à un véhicule 
 Victime* creerVictime(int age, int genre, int type, int gravite);
